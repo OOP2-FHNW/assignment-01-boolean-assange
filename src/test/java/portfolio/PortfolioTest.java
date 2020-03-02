@@ -1,6 +1,7 @@
 package portfolio;
 
 import org.junit.jupiter.api.Test;
+import portfolio.investments.Share;
 
 import static org.junit.jupiter.api.Assertions.*;
 
