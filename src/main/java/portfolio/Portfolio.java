@@ -1,7 +1,6 @@
 package portfolio;
 
 import portfolio.investments.Investment;
-import portfolio.investments.Share;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,11 +9,11 @@ public class Portfolio<T extends Investment> {
 
     private List<T> myShares = new ArrayList<>();
 
-    public boolean contains(Share s) {
+    public boolean contains(T s) {
         return myShares.contains(s);
     }
 
-    public void buy(Share s) {
+    public void buy(T s) {
         if (myShares.contains(s)) {
             for (T sh : myShares) {
                 if (sh.equals(s)) {
@@ -22,7 +21,7 @@ public class Portfolio<T extends Investment> {
                 }
             }
         } else {
-            myShares.add((T) s);
+            myShares.add(s);
         }
     }
 
